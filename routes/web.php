@@ -25,6 +25,10 @@ Route::get('admin/clientes', function () {
     return view('clientes');
 });
 
+Route::get('admin/categorias', function () {
+    return view('categorias');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

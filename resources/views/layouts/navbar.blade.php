@@ -43,6 +43,12 @@
                   Usuarios
                 </a>
               </li>
+              <li class="nav-item mb-1">
+                <a class="nav-link" href="/admin/categorias">
+                  <span data-feather="layers"></span>
+                  Categorias
+                </a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ver más</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
