@@ -14,7 +14,7 @@
               <li class="nav-item mb-1">
                 <a class="nav-link" href="/admin/productos">
                   <span data-feather="shopping-cart"></span>
-                  Productos
+                  Libros
                 </a>
               </li>
               <li class="nav-item mb-1">
@@ -46,9 +46,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ver más</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                  <a class="dropdown-item" href="#">Ventas al Contado</a>
-                  <a class="dropdown-item" href="#">Stock</a>
-                  <a class="dropdown-item" href="#">Caja</a>
+                  <a class="dropdown-item" href="#">Creditos</a>
+                  <a class="dropdown-item" href="#">Salir</a>
                 </div>
             </li>
         </ul>
