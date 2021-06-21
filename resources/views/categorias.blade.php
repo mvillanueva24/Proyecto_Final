@@ -15,7 +15,7 @@
             <thead>
                 <tr>
                   <th scope="col">#ID</th>               
-                  <th scope="col">Nombre</th>               
+                  <th scope="col">Categoría</th>               
                 </tr>
             </thead>
             <tbody>

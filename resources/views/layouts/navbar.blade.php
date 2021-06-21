@@ -6,17 +6,11 @@
         -->
         <ul class="navbar-nav mr-auto h5">
             <li class="nav-item mb-1">
-                <a class="nav-link active" href="#">
+                <a class="nav-link active" href="/home">
                     <span data-feather="home"></span>
                     Inicio <span class="sr-only">(current)</span>
                   </a>
             </li>
-            <li class="nav-item mb-1">
-                <a class="nav-link" href="#">
-                  <span data-feather="file"></span>
-                  Vender
-                </a>
-              </li>
               <li class="nav-item mb-1">
                 <a class="nav-link" href="/admin/productos">
                   <span data-feather="shopping-cart"></span>
@@ -30,11 +24,11 @@
                 </a>
               </li>
               <li class="nav-item dropdown mb-1">
-                <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Caja</a>
+                <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ventas</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                  <a class="dropdown-item" href="#">Ventas al Contado</a>
-                  <a class="dropdown-item" href="#">Stock</a>
-                  <a class="dropdown-item" href="#">Caja</a>
+                  <a class="dropdown-item" href="#">Ventas del día</a>
+                  <a class="dropdown-item" href="#">Ventas del mes</a>
+                  <a class="dropdown-item" href="#">Ventas del año</a>
                 </div>
               </li>
               <li class="nav-item mb-1">
