@@ -1,5 +1,5 @@
 <div class="row flex-xl-nowrap py-4">
-    <div class="col-12 col-xl-1 bd-sidebar collapse" id="sidebarMenu">
+    <div class="col-12 col-xl-2 bd-sidebar collapse" id="sidebarMenu">
         <!-- Left Side Of Navbar 
             col-12 col-md-3 col-xl-2 bd-sidebar collapse
             "col-12 col-md-3 col-xl-1 ml-4 d-md-block bd-sidebar collapse"
@@ -34,7 +34,7 @@
               <li class="nav-item mb-1">
                 <a class="nav-link" href="#">
                   <span data-feather="layers"></span>
-                  Usuarios
+                  Adminsitradores
                 </a>
               </li>
               <li class="nav-item mb-1">
