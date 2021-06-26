@@ -22,7 +22,11 @@ class SaleFactory extends Factory
     public function definition()
     {
         return [
-            //
+            /*
+            Creo que no debemos de poblar este
+            'cantidad' => $this->faker->randomNumber($nbDigits = 1, $strict = false), 
+            'monto' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 50, $max = 200),, 
+            'fecha',*/
         ];
     }
 }
