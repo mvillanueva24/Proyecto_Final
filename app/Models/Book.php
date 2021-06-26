@@ -2,16 +2,16 @@
 
 namespace App\Models;
 
-//use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 //use Illuminate\Database\Eloquent\Model;
 use Jenssegers\Mongodb\Eloquent\Model;
 
 class Book extends Model
 {
-    //,use HasFactory;
+    use HasFactory;
 
     protected $fillable = [
-        'title', 'author', 'precio_compra', 'precio_venta', 'image','stock'
+        'title', 'author', 'precio', 'image','stock'
     ];
 
     public function sales()
