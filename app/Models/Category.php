@@ -13,7 +13,7 @@ class Category extends Model
         'genero'
     ];
 
-    public function book()
+    public function books()
     {
         return $this->hasMany('App\Models\Book');
     }
