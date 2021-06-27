@@ -8,5 +8,5 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-
+    
 }

@@ -21,7 +21,8 @@ Route::get('/', function () {
 
 Route::get('/admin/libros', [BookController::class, 'show']);
 
-Route::post('/admin/libros/create', [BookController::class, 'store']); 
+Route::get('/admin/libros/create', [BookController::class, 'show_create']);
+Route::post('/admin/libros/create', [BookController::class, 'store'])->name('user.create'); 
 
 Route::get('admin/usuarios', [UserController::class, 'show']);
 
