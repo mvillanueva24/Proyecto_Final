@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin/libros', [BookController::class, 'index']);
+Route::get('/admin/libros', [BookController::class, 'show']);
 
 Route::post('/admin/libros/create', [BookController::class, 'store']); 
 
@@ -31,5 +31,5 @@ Route::get('admin/categorias', function () {
 
 Auth::routes();
 
-Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

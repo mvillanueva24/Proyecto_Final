@@ -13,7 +13,7 @@ class BookController extends Controller
         $this->middleware('auth');
     }
     
-    public function index(){
+    public function show(){
         $books = Book::all();
         return view('registroProductos', compact('books'));
     }
