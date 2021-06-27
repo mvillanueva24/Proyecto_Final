@@ -6,18 +6,16 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateCategoriesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
+        
+        //connection('mysql')->
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('genero');
             $table->timestamps();
         });
+        
     }
 
     /**
@@ -27,6 +25,7 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
+        //connection('mysql')->
         Schema::dropIfExists('categories');
     }
 }

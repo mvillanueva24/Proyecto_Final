@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Book;
+use App\Models\Category;
 
 class CategoryTableSeeder extends Seeder
 {
@@ -13,6 +15,6 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Category::factory(5)->has(Book::factory()->count(3))->create();
     }
 }

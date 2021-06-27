@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('admin/productos', function () {
-    return view('registroProductos');
-});
+Route::get('/admin/libros', [BookController::class, 'index']);
 
-Route::get('admin/clientes', function () {
-    return view('clientes');
-});
+Route::post('/admin/libros/create', [BookController::class, 'store']); 
+
+Route::get('admin/usuarios', [UserController::class, 'show']);
 
 Route::get('admin/categorias', function () {
     return view('categorias');
@@ -31,5 +31,5 @@ Route::get('admin/categorias', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

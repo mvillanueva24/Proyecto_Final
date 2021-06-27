@@ -22,7 +22,7 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            'genero' => $this->faker->randomElements($array = array ('Terror','Novela','Juvenil','Suspenso','Horror','Acción','Romanca'), $count = 1),
+            'genero' => $this->faker->randomElements($array = array ('Terror', 'Drama', 'Literatura', 'Juvenil', 'Cuentos', 'Acción'), $count = 1),
             //'genero' => $this->faker->sentence($nbWords = 2),
         ];
     }

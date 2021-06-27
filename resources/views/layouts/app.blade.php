@@ -21,6 +21,7 @@
     
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/11b6dba20d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="app">
@@ -84,8 +85,7 @@
         
             
         <main class="col-12 col-md-12 col-xl-11 py-md-3 pl-md-5 bd-content">
-            
-            @yield('content')
+                @yield('content')
         </main>            
         </div>
 

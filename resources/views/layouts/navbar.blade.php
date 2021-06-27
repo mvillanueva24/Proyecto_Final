@@ -12,15 +12,15 @@
                   </a>
             </li>
               <li class="nav-item mb-1">
-                <a class="nav-link" href="/admin/productos">
+                <a class="nav-link" href="/admin/libros">
                   <span data-feather="shopping-cart"></span>
                   Libros
                 </a>
               </li>
               <li class="nav-item mb-1">
-                <a class="nav-link" href="/admin/clientes">
+                <a class="nav-link" href="/admin/usuarios">
                   <span data-feather="users"></span>
-                  Clientes
+                  Usuarios
                 </a>
               </li>
               <li class="nav-item dropdown mb-1">
@@ -30,12 +30,6 @@
                   <a class="dropdown-item" href="#">Ventas del mes</a>
                   <a class="dropdown-item" href="#">Ventas del año</a>
                 </div>
-              </li>
-              <li class="nav-item mb-1">
-                <a class="nav-link" href="#">
-                  <span data-feather="layers"></span>
-                  Adminsitradores
-                </a>
               </li>
               <li class="nav-item mb-1">
                 <a class="nav-link" href="/admin/categorias">
