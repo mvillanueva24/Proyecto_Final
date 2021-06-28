@@ -5,11 +5,16 @@
 @include('layouts.navbar') <!--Mostrar el menú-->
 
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            
-        </div>
-    </div>
+    <!--
+    foreach($photosArray as $photos)
+      <div class="col-md-6">
+        <ul class="list group mt-2 mb-4">
+            <li class="list-group-item active"> $photos['name']*/</li>
+            <li class="list-group-item"> $photos['email']</li>
+            <li class="list-group-item"> $photos['phone']</li>
+      </div>
+    endforeach
+  -->
 </div>
 
 @endsection
