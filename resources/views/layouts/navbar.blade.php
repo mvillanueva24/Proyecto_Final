@@ -18,9 +18,9 @@
                 </a>
               </li>
               <li class="nav-item mb-1">
-                <a class="nav-link" href="/admin/usuarios">
+                <a class="nav-link" href="/admin/user">
                   <span data-feather="users"></span>
-                  Usuarios
+                  Administradores
                 </a>
               </li>
               <li class="nav-item dropdown mb-1">

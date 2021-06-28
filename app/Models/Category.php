@@ -9,6 +9,8 @@ use Jenssegers\Mongodb\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+    
+    protected $primaryKey = '_id';
     //protected $connection = 'mysql';
     protected $fillable = [
         'genero'

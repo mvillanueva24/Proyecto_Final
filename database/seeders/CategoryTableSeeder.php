@@ -15,6 +15,31 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        Category::factory(5)->has(Book::factory()->count(3))->create();
+        //Category::factory(5)->has(Book::factory()->count(3))->create();
+        Category::factory(1)
+        ->has(Book::factory()->count(10))
+        ->state(['genero' => 'Terror'])
+        ->create();
+        Category::factory(1)
+        ->has(Book::factory()->count(10))
+        ->state(['genero' => 'Drama'])
+        ->create();
+        Category::factory(1)
+        ->has(Book::factory()->count(10))
+        ->state(['genero' => 'Literatura'])
+        ->create();
+        Category::factory(1)
+        ->has(Book::factory()->count(10))
+        ->state(['genero' => 'Juvenil'])
+        ->create();
+        Category::factory(1)
+        ->has(Book::factory()->count(10))
+        ->state(['genero' => 'Cuentos'])
+        ->create();
+        Category::factory(1)
+        ->has(Book::factory()->count(10))
+        ->state(['genero' => 'Accion'])
+        ->create();
+
     }
 }
