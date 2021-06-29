@@ -29,7 +29,7 @@ Route::post('admin/user/store',[UserController::class, 'store'])->name('users.st
 
 Route::get('/admin/libros', [BookController::class, 'show'])->name('showBooks');
 Route::get('/admin/libros/create', [BookController::class, 'create'])->name('books.create');
-Route::get('/admin/libros/store', [BookController::class, 'store'])->name('books.store');
+Route::post('/admin/libros/store', [BookController::class, 'store'])->name('books.store');
 Route::get('/admin/libros/{id}', [BookController::class, 'deleteBook']);
 
 Route::get('/admin/categorias', [CategoryController::class, 'show'])->name('showCategory');

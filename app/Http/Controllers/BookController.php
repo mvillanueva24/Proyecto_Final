@@ -48,18 +48,17 @@ class BookController extends Controller
         $stock = $request->get('stock');
         $categoria = $request->get('categoria');
         
-        $category = Category::find('genero'->$categoria);
-
-        $book = $request->create([
+        $category = Category::where('genero', "=", $categoria)->first();
+        Book::create([
             'title' => $title,
             'author' => $autor,
             'precio' => $precio,
             'stock' => $stock,
-            'categoria' => $category->id,
+            'category_id' => $category->id,
             'image' => 'img/' . $imageName,
         ]);
         //User::create($request->all());
-        return redirect()->route('books');
+        return redirect()->route('showBbooks');
     }
     
     /*

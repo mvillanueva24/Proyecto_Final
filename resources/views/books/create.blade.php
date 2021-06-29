@@ -19,7 +19,7 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ url('/admin/libros/create') }}" method="get" enctype="multipart/form-data">
+            <form action="{{ url('/admin/libros/store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="title" class="col-sm-12 col-form-label">
@@ -38,7 +38,7 @@
                     <label for="autor" class="col-sm-12 col-form-label">Autor</label>
                     <div class="col-sm-12">
                         <input type="text" id="author" name="author" class="form-control 
-                        {{$errors->has('author') ? ' is-invalid' : ''}}" value="{{ old('author') }}" autofocus>
+                        {{$errors->has('author') ? ' is-invalid' : ''}}" value="{{ old('author') }}">
                         @if ($errors->has('author'))
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $errors->first('author') }}</strong>
@@ -50,7 +50,7 @@
                     <label for="precio" class="col-sm-12 col-form-label">Precio</label>
                     <div class="col-sm-12">
                         <input type="number" id="precio" name="precio" class="form-control 
-                        {{$errors->has('precio') ? ' is-invalid' : ''}}" value="{{ old('precio') }}" autofocus>
+                        {{$errors->has('precio') ? ' is-invalid' : ''}}" value="{{ old('precio') }}">
                         @if ($errors->has('precio'))
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $errors->first('precio') }}</strong>
@@ -75,7 +75,7 @@
                     <label for="stock" class="col-sm-12 col-form-label">Stock</label>
                     <div class="col-sm-12">
                         <input type="number" id="stock" name="stock" class="form-control
-                        {{$errors->has('stock') ? ' is-invalid' : ''}}" value="{{ old('stock') }}" autofocus> 
+                        {{$errors->has('stock') ? ' is-invalid' : ''}}" value="{{ old('stock') }}"> 
                         @if ($errors->has('stock'))
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $errors->first('stock') }}</strong>
@@ -85,10 +85,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="categoria" class="col-sm-12 col-form-label">Stock</label>
+                    <label for="categoria" class="col-sm-12 col-form-label">Género</label>
                     <div class="col-sm-12">
                         <input type="text" id="categoria" name="categoria" class="form-control
-                        {{$errors->has('categoria') ? ' is-invalid' : ''}}" value="{{ old('categoria') }}" autofocus> 
+                        {{$errors->has('categoria') ? ' is-invalid' : ''}}" value="{{ old('categoria') }}"> 
                         @if ($errors->has('categoria'))
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $errors->first('categoria') }}</strong>
