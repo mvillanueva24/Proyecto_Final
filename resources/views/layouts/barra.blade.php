@@ -71,7 +71,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                  <div class="menu">
                       <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
                         <ul class="nav" id="nav">
-                            <li><a href="/cliente/shop">libros</a></li>							
+                            <li><a href="/cliente/shop">Libros</a></li>
+                            <li><a href="/home">Administrador</a></li>
                             <div class="clear"></div>
                         </ul>
                         <script type="text/javascript" src="js/responsive-nav.js"></script>
@@ -134,8 +135,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <ul class="footer_box">
                     <h4>Integrantes</h4>
                     <li><a href="#">Guido lucana lopez</a></li>
-                    <li><a href="#">jose pilco</a></li>
-                    <li><a href="#">luiz rivera</a></li>
+                    <li><a href="#">Jose pilco</a></li>
+                    <li><a href="#">Luiz rivera</a></li>
+                    <li><a href="#">Joaquin Salas</a></li>
+                    <li><a href="#">Jesus Vilca</a></li>
+                    <li><a href="#">Mario Villanueva</a></li>
                 </ul>
             </div>
             
@@ -144,7 +148,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         
         <div class="row footer_bottom">
             <div class="copy">
-               <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+               <p>© 2021 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
             </div>
               <dl id="sample" class="dropdown">
                 <dt><a href="#"><span>Creditos</span></a></dt>

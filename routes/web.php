@@ -17,18 +17,19 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('cliente.index');
 });
 
-Route::get('/admin/user', [UserController::class, 'index'])->name('administradores');
+Route::get('/admin/user', [UserController::class, 'index'])->name('usuarios');
 Route::get('user/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
 Route::put('user/{user}',[UserController::class, 'update'])->name('users.update');
 Route::get('user/{user}',[UserController::class, 'destroy'])->name('users.delete');
-Route::get('createAdmin',[UserController::class, 'store'])->name('users.store');
+Route::get('admin/user/create',[UserController::class, 'create'])->name('users.create');
+Route::post('admin/user/store',[UserController::class, 'store'])->name('users.store');
 
 Route::get('/admin/libros', [BookController::class, 'show'])->name('showBooks');
-Route::get('/admin/libros/create', [BookController::class, 'show_create']);
-Route::post('/admin/libros/create', [BookController::class, 'store'])->name('user.create');
+Route::get('/admin/libros/create', [BookController::class, 'create'])->name('books.create');
+Route::get('/admin/libros/store', [BookController::class, 'store'])->name('books.store');
 Route::get('/admin/libros/{id}', [BookController::class, 'deleteBook']);
 
 Route::get('/admin/categorias', [CategoryController::class, 'show'])->name('showCategory');

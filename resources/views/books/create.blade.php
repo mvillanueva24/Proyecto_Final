@@ -19,7 +19,7 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ url('/admin/libros/create') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin/libros/create') }}" method="get" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="title" class="col-sm-12 col-form-label">
