@@ -87,14 +87,19 @@
                 <div class="form-group">
                     <label for="categoria" class="col-sm-12 col-form-label">Género</label>
                     <div class="col-sm-12">
-                        <input type="text" id="categoria" name="categoria" class="form-control
-                        {{$errors->has('categoria') ? ' is-invalid' : ''}}" value="{{ old('categoria') }}"> 
-                        @if ($errors->has('categoria'))
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('categoria') }}</strong>
-                            </span>
-                        @endif
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="categoria">Options</label>
+                            </div>
+                            <select class="custom-select" id="categoria" name="categoria">
+                                <option selected>Choose...</option>
+                                @foreach ($books as $book)
+                                <option name="categoria">{{ $book->genero }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
+                    
                 </div>
 
                 <div class="form-group">

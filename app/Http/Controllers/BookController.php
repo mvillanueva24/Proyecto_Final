@@ -34,70 +34,58 @@ class BookController extends Controller
     }
 
     public function create()
-    { 
-        return view('books.create');
+    {
+        $books = Category::all();
+        return view('books.create', compact('books'));
     }
 
     public function store(Request $request){
+
+        $book = new Book();
+
         $image = $request->file('image');
         $imageName = time().$image->getClientOriginalName();
 
-        $title = $request->get('title');
-        $autor = $request->get('author');
-        $precio = $request->get('precio');
-        $stock = $request->get('stock');
+        $book->title = $request->get('title');
+        $book->author = $request->get('author');
+        $book->precio = $request->get('precio');
+        $book->stock = $request->get('stock');
+        $book->image = 'img/' . $imageName;
         $categoria = $request->get('categoria');
-        
         $category = Category::where('genero', "=", $categoria)->first();
-        Book::create([
-            'title' => $title,
-            'author' => $autor,
-            'precio' => $precio,
-            'stock' => $stock,
-            'category_id' => $category->id,
-            'image' => 'img/' . $imageName,
-        ]);
-        //User::create($request->all());
-        return redirect()->route('showBbooks');
-    }
-    
-    /*
-    public function store(Request $request){
-        $request->validate([
-            'title' => 'required:max:30',
-            'author' => 'required:max:20',
-            'precio' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-            'stock' => 'required|integer|digits_between:1,3',
-            'categoria' => 'required:max:10',
-        ]);
-
-        $image = $request->file('image');
-        $imageName = time().$image->getClientOriginalName();
-
-        $title = $request->get('title');
-        $autor = $request->get('autor');
-        $precio = $request->get('precio');
-        $stock = $request->get('stock');
-        $categoria = $request->get('categoria');
-        
-        $category = Category::find('genero'->$categoria);
-
-        $book = $request->book()->create([
-            'title' => $title,
-            'author' => $autor,
-            'precio' => $precio,
-            'stock' => $stock,
-            'categoria' => $category->id,
-            'image' => 'img/' . $imageName,
-        ]);
-
+        $category->books()->save($book);
         $request->image->move(public_path('img'), $imageName);
 
-        return redirect()->url('/admin/libros');
-    }*/
+        return redirect()->route('showBooks');
+    }
 
-    public function deleteBook($id)
+    public function edit($id){
+        $books = Book::find($id);
+        $book1 = Category::all();
+	    return view('books.edit', compact('books', 'book1'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $image = $request->file('image');
+        $imageName = time().$image->getClientOriginalName();
+
+        $book = Book::find($id);
+        $book->title = $request->get('title');
+        $book->author = $request->get('author');
+        $book->precio = $request->get('precio');
+        $book->stock = $request->get('stock');
+        $book->image = 'img/' . $imageName;
+        $categoria = $request->get('categoria');
+        $category = Category::where('genero', "=", $categoria)->first();
+        $category->books()->save($book);
+        $request->image->move(public_path('img'), $imageName);
+
+        return redirect()->route('showBooks');
+
+    }
+
+    public function destroy($id)
     {
         $dpost = Book::find($id);
         $dpost->delete();

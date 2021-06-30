@@ -30,7 +30,9 @@ Route::post('admin/user/store',[UserController::class, 'store'])->name('users.st
 Route::get('/admin/libros', [BookController::class, 'show'])->name('showBooks');
 Route::get('/admin/libros/create', [BookController::class, 'create'])->name('books.create');
 Route::post('/admin/libros/store', [BookController::class, 'store'])->name('books.store');
-Route::get('/admin/libros/{id}', [BookController::class, 'deleteBook']);
+Route::get('/admin/libros/{id}', [BookController::class, 'destroy']);
+Route::get('/admin/libros/edit/{id}', [BookController::class, 'edit'])->name('books.edit');
+Route::post('/admin/libros/edit/libro/{id}',[BookController::class, 'update'])->name('books.update');
 
 Route::get('/admin/categorias', [CategoryController::class, 'show'])->name('showCategory');
 Route::post('category/create', [UserController::class, 'create'])->name('category.create');

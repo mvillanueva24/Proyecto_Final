@@ -16,7 +16,7 @@
 							<span class="sale-label">Sale!</span>
 						</span>
 						<div class="shop_desc" >
-							<h3><a href="#">{{ $book->title }}</a></h3>
+							<h3><a href="{{ url('/cliente/shop/book/' . $book->id) }}">{{ $book->title }}</a></h3>
 							<!--<p>Lorem ipsum consectetuer adipiscing </p>-->
 							<!--<span class="reducedfrom"></span>-->
 							<span class="actual">S/. {{ $book->precio }}</span><br>
