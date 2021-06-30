@@ -30,16 +30,16 @@ Route::post('admin/user/store',[UserController::class, 'store'])->name('users.st
 Route::get('/admin/libros', [BookController::class, 'show'])->name('showBooks');
 Route::get('/admin/libros/create', [BookController::class, 'create'])->name('books.create');
 Route::post('/admin/libros/store', [BookController::class, 'store'])->name('books.store');
-Route::get('/admin/libros/{id}', [BookController::class, 'destroy']);
+Route::get('/admin/libros/destroy/{id}', [BookController::class, 'destroy']);
 Route::get('/admin/libros/edit/{id}', [BookController::class, 'edit'])->name('books.edit');
 Route::post('/admin/libros/edit/libro/{id}',[BookController::class, 'update'])->name('books.update');
 
 Route::get('/admin/categorias', [CategoryController::class, 'show'])->name('showCategory');
-Route::post('category/create', [UserController::class, 'create'])->name('category.create');
+Route::get('category/create', [CategoryController::class, 'create'])->name('category.create');
+Route::post('/admin/category/store', [CategoryController::class, 'store'])->name('category.store');
 Route::get('/admin/category/{id}', [CategoryController::class, 'deleteCategory']);
-
-
-Route::get('/crearcategoria', [CategoryController::class, "create"]);
+Route::get('/admin/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
+Route::post('/admin/category/update/{id}', [CategoryController::class, 'update'])->name('category.update');
 
 Route::get('/cliente', function () {
     return view('cliente.index');
@@ -82,9 +82,8 @@ Route::get('/cliente/login', function () {
 
 //Falta automatizar
 Route::get('cliente/accion', [BookController::class, 'show_accion_books']);
+
 Route::get('cliente/terror', [BookController::class, 'show_terror_books']);
-
-
 
 Route::get('cliente/cuento', [BookController::class, 'show_cuento_books']);
 

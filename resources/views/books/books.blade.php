@@ -39,7 +39,7 @@
                   <a class="btn btn-sm btn-success" href="{{ route('books.edit', $book->id) }}"><i class="fas fa-edit text-white" style="font-size: large;"></i></a>
                 </th>
                 <th scope="col">
-                  <a class="btn btn-sm btn-danger" href="{{ url('admin/libros/', $book->id) }}">
+                  <a class="btn btn-sm btn-danger" href="{{ url('admin/libros/destroy', $book->id) }}">
                   <i class="fas fa-trash text-white" style="font-size: large;"></i>
                   </a>
                 </th>

@@ -12,7 +12,7 @@
         </div>
         <div class="card-body">
 
-        <a class="text-white btn btn-success my-2" href="/crearcategoria"><i class="fa fa-plus"></i> Create Category</a>
+        <a class="text-white btn btn-success my-2" href="{{ route('category.create') }}"><i class="fa fa-plus"></i> Create Category</a>
             
 
             <table class="table">
@@ -30,14 +30,14 @@
                     @foreach ($categories as $category)
                         <tr>
                            
-                            <td>{{ $category-> genero}}</td>
+                            <td>{{ $category->genero}}</td>
                             <td>{{ $category->created_at->format('d-m-Y') }}</td>
                             <td>{{ $category->updated_at->format('d-m-Y') }}</td>
                             <td>
-                                <a class="btn btn-sm btn-success" href="{{ route('category.create', $category->_id) }}"><i
+                                <a class="btn btn-sm btn-success" href="{{ route('category.edit', $category->id) }}"><i
                                         class="fa fa-edit text-white"></i></a>
-                                <a data-id="{{ $category->_id }}" data-title="{{ $category->title }}" class="btn btn-sm btn-danger"
-                                    href="#" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i></a>
+                                <a data-id="{{ $category->id }}" data-title="{{ $category->title }}" class="btn btn-sm btn-danger"
+                                    href="{{ route('category.edit', $category->id) }} " data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                     @endforeach

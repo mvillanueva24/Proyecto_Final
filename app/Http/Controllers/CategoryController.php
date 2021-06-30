@@ -15,7 +15,27 @@ class CategoryController extends Controller
 
     public function create()
     {
-        return view('category.edit', ['category' => new Category()]);
+        return view('category.create');
+    }
+
+    public function store(Request $request){
+
+        $category = new Category;
+        $category->genero = $request->categoria;
+        $category->save();
+        return redirect()->route('showCategory');
+    }
+
+    public function edit($id){
+        $categories = Category::find($id);
+	    return view('category.edit', compact('categories'));
+    }
+
+    public function update(Request $request, $id){
+        $category = Category::find($id);
+        $category->genero = $request->categoria;
+        $category->save();
+        return redirect()->route('showCategory');
     }
 
     public function deleteCategory($id)
